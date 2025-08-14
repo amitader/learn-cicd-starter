@@ -1,10 +1,10 @@
 package auth
 
 import (
-	"testing"
+	"errors"
 	"net/http"
 	"reflect"
-	"errors"
+	"testing"
 )
 
 func TestShouldSuccedd(t *testing.T) {
@@ -21,7 +21,7 @@ func TestNoKey(t *testing.T) {
 	headers := http.Header{}
 	headers.Set("Authorization", "ApiKey")
 	got, err := GetAPIKey(headers)
-	if err == nil{
+	if err == nil {
 		t.Fatalf("expected to fail but got %v", got)
 	}
 }
