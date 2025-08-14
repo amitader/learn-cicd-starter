@@ -33,7 +33,7 @@ func TestMissingAuthHeader(t *testing.T) {
 		t.Fatalf("expected error %v, got %v", ErrNoAuthHeaderIncluded, err)
 	}
 
-	if got == "" {
+	if got != "" {
 		t.Fatalf("expected empty key, got %q", got)
 	}
 }
