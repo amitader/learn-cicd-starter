@@ -27,7 +27,6 @@ jobs:
         run: ./scripts/buildprod.sh
 
 
-
       # ------------------- Google Cloud steps -------------------
       - id: auth
         uses: google-github-actions/auth@v2
